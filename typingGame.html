@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="typingGame.css" />
+  </head>
+  <body>
+    <div id="endGame">Game Over</div>
+    <div class="timebar">
+      <div id="timeRemaining"></div>
+    </div>
+    <div id="wordbox"></div>
+    <button class="dropbtn" id="start">Start</button>
+    <div class="dropdown">
+      <div class="dropbtn">Game Mode</div>
+      <div class="dropdown-content">
+        <button class="dropdown-option" value="easy">Easy</button>
+        <button
+          class="dropdown-option"
+          value="medium"
+          style="background-color: red"
+        >
+          Medium
+        </button>
+        <button class="dropdown-option" value="hard">Hard</button>
+      </div>
+    </div>
+    <script src="typingGame.js"></script>
+  </body>
+</html>

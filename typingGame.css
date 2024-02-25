@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wordbox {
+    background: #999;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.letter {
+    font-size: 5rem;
+}
+
+.letter-completed {
+    background: green;
+}
+
+/* timer */
+
+.timebar {
+    width: 100%;
+    height: 25px;
+}
+
+#timeRemaining {
+    height: 100%;
+    background: red;
+}
+
+/* ui */
+
+#endGame {
+    position: absolute;
+    background: rgba(255, 0, 0, .5);
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    font-size: 3rem;
+    border-radius: 30px;
+    display: none;
+}
+
+/* dropdown menu */
+.dropbtn {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    border: 3px solid grey;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-option {
+      width: 100%;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      text-align: left;
+      display: block;
+      border: none;
+      font-size: 1.5rem;
+      border-radius: 0;
+  }
+  
+  .dropdown-option:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #ddd;}
