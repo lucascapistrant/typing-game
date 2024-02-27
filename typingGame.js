@@ -45,6 +45,10 @@ function letterUpdate(l, isCorrect) {
         firstChild.classList.remove('letter-incorrect');
     }else {
         nextChild.classList.add('letter-incorrect');
+        nextChild.classList.add('shake');
+        setTimeout(() => {
+            nextChild.classList.remove('shake');
+          }, 200);
     }
 
 }
@@ -110,13 +114,18 @@ function healthUpdate() {
 // dropdown menu
 
 const options = document.querySelectorAll('.gameModeBtn');
+const startBtn = document.getElementById('start');
+const endPopup = document.getElementById('endGame');
 
 options.forEach(option => {
     option.addEventListener('click', () => {
         health = 100;
         gameMode = option.value;
+        wordbox.innerHTML = '';
+        stringToSpan();
         highscoreUI.innerHTML = highscore[gameMode];
         pointUI.innerHTML = 0;
+        endPopup.style.display = 'none';
         if(gameIsGoing) startGame();
         options.forEach((option) => {option.style.backgroundColor = '#fff'; option.style.color = '#000'});
         option.style.backgroundColor = 'red';
@@ -126,8 +135,6 @@ options.forEach(option => {
 
 // ui
 
-const startBtn = document.getElementById('start');
-const endPopup = document.getElementById('endGame');
 let healthInterval;
 
 startBtn.addEventListener('click', () => {startGame();})

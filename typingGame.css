@@ -50,8 +50,11 @@ button {
 
 .letter-incorrect {
     background: #FA5F55;
-    animation: shake .2s ease-in-out;
     z-index: -1;
+}
+
+.shake {
+    animation: shake .2s ease-in-out;
 }
 
 @keyframes shake {
