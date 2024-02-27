@@ -37,11 +37,30 @@ button {
 }
 
 .letter-completed {
-    background: green;
+    background: #93C572;
+    animation: pop .2s ease-in-out;
+    z-index: -1;
+}
+
+@keyframes pop {
+    50% {
+        transform: scale(110%);
+    }
 }
 
 .letter-incorrect {
-    background: red;
+    background: #FA5F55;
+    animation: shake .2s ease-in-out;
+    z-index: -1;
+}
+
+@keyframes shake {
+    25% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
 }
 
 #pointPopup {
